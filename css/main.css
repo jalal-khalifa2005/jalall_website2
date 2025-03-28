@@ -1,0 +1,1360 @@
+/* global rulse */
+
+
+:root {
+    --main-color: #19c8fa;
+    --transparent-color: rgb(15 116 143 / 70%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+::selection {
+    background-color: #19c8fa;
+}
+
+ul {
+    list-style: none;
+
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+
+
+
+}
+
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+
+
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+
+
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+
+/* end of global */
+.sec .main {
+    text-align: center;
+    padding: 100px;
+}
+
+@media (max-width: 768px) {
+    .sec .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+}
+
+.sec .main h2 {
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-bottom: 70px;
+    position: relative;
+
+}
+
+.sec .main h2::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 140px;
+    background-color: black;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -30px;
+
+}
+
+.sec .main h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 100%;
+    border: 2px solid black;
+    width: 14px;
+    height: 14px;
+    background-color: white;
+    bottom: -38px;
+}
+
+.sec .main p {
+
+    max-width: 100%;
+    color: #777;
+    margin: 0 auto 100px;
+    line-height: 1.5;
+}
+
+/* start of header */
+header {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+
+
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+    min-height: 97px;
+
+}
+
+header .container::after {
+    content: "";
+    height: 2px;
+    position: absolute;
+    bottom: -1px;
+    width: calc(100% - 30px);
+    background-color: white;
+}
+
+.logo {
+    height: 40px;
+}
+
+.container nav>i {
+    color: white;
+    font-size: 20px;
+    display: none;
+
+
+}
+
+.container nav>i:hover+ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+
+}
+
+@media (max-width: 768px) {
+    .container nav i {
+        display: block
+    }
+}
+
+.container nav {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+
+
+}
+
+.container nav .form {
+    border-left: solid 1px white;
+    width: 40px;
+    height: 30px;
+    margin-left: 30px;
+
+}
+
+.container nav .form i {
+    font-size: 20px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    color: white;
+    cursor: pointer;
+
+}
+
+.container nav .form:hover i {
+    color: #19c8fa;
+}
+
+.container nav ul {
+    display: flex;
+    gap: 10px;
+}
+
+
+
+.container nav ul li a {
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+    padding: 40px 10px;
+    display: block;
+    transition: 0.3s;
+    position: relative;
+    z-index: 3;
+
+
+}
+
+@media (max-width: 768px) {
+    .container nav ul {
+        display: none;
+    }
+
+    .container nav>i:hover+ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .container nav ul li a {
+        padding: 15px;
+    }
+
+
+}
+
+.container nav ul li a.active {
+    color: var(--main-color);
+    border-bottom: solid 2px var(--main-color);
+}
+
+.container nav ul li a:hover {
+    color: var(--main-color);
+    border-bottom: solid 2px var(--main-color);
+}
+
+/*end of header*/
+
+/*start of landing*/
+
+.landing {
+    min-height: 100vh;
+    position: relative;
+    background-image: url('https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/landing.jpg');
+
+    background-size: cover;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.641);
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+
+.landing .text {
+    background-color: var(--transparent-color);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    padding: 50px;
+    width: 50%;
+    transform: translateY(-50%);
+
+    color: white;
+    line-height: 1.5;
+
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.text .content {
+    max-width: 500px;
+}
+
+@media (max-width :768px) {
+    .landing .text {
+        width: 100%;
+        justify-content: center;
+
+    }
+
+    .text .content {
+        max-width: 100%;
+    }
+}
+
+.landing .text h2 {
+    font-size: 32px;
+    font-weight: normal;
+    margin-bottom: 30px;
+    line-height: 1.5;
+
+}
+
+.landing .fa-angle-left {
+    position: absolute;
+    top: 47%;
+    left: 1%;
+    color: white;
+    font-size: 30px;
+    ;
+
+}
+
+.landing .fa-angle-right {
+    position: absolute;
+    top: 47%;
+    left: 97%;
+    color: white;
+    font-size: 30px;
+    ;
+
+}
+
+@media (max-width: 768px) {
+
+    .landing .fa-angle-left,
+    .landing .fa-angle-right {
+        display: none;
+
+
+    }
+}
+
+.landing .bull {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    left: 50%;
+    top: 95%;
+    transform: translateX(-50%);
+
+
+}
+
+.landing .bull li {
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 100%;
+
+
+}
+
+.landing .bull li.active {
+    background-color: #19c8fa;
+}
+
+
+
+
+
+/*end of landing*/
+/* start of services */
+.services {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.services .container .ser-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-row-gap: 60px;
+    grid-column-gap: 60px;
+
+}
+
+.services .container .ser-grid .srv-box {
+    display: flex;
+    gap: 30px;
+
+}
+
+@media (max-width: 1199px) {
+
+
+
+    .services .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services .container .ser-grid .srv-box {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .services .container .ser-grid .srv-box .text-srv {
+        text-align: center;
+        max-width: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    .services .container .ser-grid .srv-box {
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+    .services .container .ser-grid .srv-box .text-srv {
+        text-align: center;
+
+    }
+}
+
+.services .container .ser-grid .srv-box h3 {
+    color: #19c8fa;
+    margin-bottom: 30px;
+
+}
+
+.services .container .ser-grid .srv-box p {
+    line-height: 1.5;
+    color: #777;
+}
+
+/* start of desgin */
+.desgin {
+    background-image: url('https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/design-features.jpg');
+    background-size: cover;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden
+}
+
+.desgin .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.641);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.desgin .text-desgin {
+    background-color: var(--transparent-color);
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    padding: 50px;
+    width: 50%;
+    transform: translate(-100%, -50%);
+    color: white;
+    line-height: 1.5;
+    display: flex;
+    justify-content: flex-start;
+    z-index: 3;
+}
+
+@media (max-width :768px) {
+    .desgin .text-desgin {
+        width: 100%;
+        justify-content: center;
+
+    }
+
+    .desgin .img {
+        display: none;
+    }
+
+
+}
+
+.desgin .text-desgin .content {
+    display: flex;
+    flex-direction: column;
+}
+
+.desgin .text-desgin .content h3 {
+    font-weight: normal;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.desgin .text-desgin .content ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 16px;
+    ;
+}
+
+.desgin .text-desgin .content ul li::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f108";
+    font-weight: 900;
+    margin-right: 20px;
+    position: relative;
+    top: 1px;
+
+
+}
+
+.desgin .img {
+    z-index: 300;
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    transform: translateX(-10%);
+    overflow: hidden
+}
+
+/* start of portfolio */
+.port {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.port .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.port .container ul {
+    display: flex;
+
+
+}
+
+.port .container ul li {
+    padding: 10px;
+}
+
+.port .container ul li.active {
+    background-color: #19c8fa;
+    color: white;
+}
+
+.port .img-cont {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    overflow: hidden;
+
+
+}
+
+.port .img-cont .img-box {
+    flex-basis: 25%;
+    position: relative;
+    overflow: hidden;
+}
+
+.port .img-cont .img-box:hover .cap {
+    top: 101%;
+
+}
+
+.port .img-cont .img-box:hover img {
+    transform: rotate(3deg) scale(1.1);
+}
+
+
+@media (min-width : 768px) {
+    .port .img-cont .img-box {
+        flex-basis: 50%;
+    }
+
+}
+
+@media (min-width : 1199px) {
+    .port .img-cont .img-box {
+        flex-basis: 25%;
+    }
+
+}
+
+@media (max-width : 768px) {
+    .port .img-cont .img-box {
+        flex-basis: 100%;
+    }
+
+}
+
+.port .img-cont .img-box img {
+    max-width: 100%;
+    transition: 0.2s
+}
+
+.port .img-cont .img-box .cap {
+    position: absolute;
+    background-color: white;
+    top: 200%;
+    transform: translateY(-100%);
+    width: 100%;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.port .img-cont .img-box .cap h4 {
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+.port .img-cont .img-box .cap p {
+    color: #19c8fa;
+    cursor: pointer;
+
+}
+
+.port>a {
+    width: fit-content;
+
+    padding: 15px 20px;
+    display: block;
+    margin: 30px auto;
+    text-align: center;
+
+    background-color: #19c8fa;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+.port>a:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px 1px #00000024;
+
+}
+
+/* start video */
+.video {
+    position: relative;
+
+}
+
+
+
+.video video {
+    width: 100%;
+
+}
+
+.text-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--transparent-color);
+    padding: 50px;
+    width: 100%;
+    color: white;
+    text-align: center;
+
+
+}
+
+.text-video h3 {
+    font-size: 32px;
+    font-weight: normal;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+
+}
+
+.text-video p {
+    margin-bottom: 30px;
+}
+
+.text-video button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    text-transform: uppercase;
+
+}
+
+/* start of about  */
+.about {
+
+
+    overflow: hidden;
+    text-align: center;
+}
+
+.about .container {
+    position: relative;
+
+}
+
+.about .container img {
+    position: relative;
+    bottom: -120px;
+    margin-top: -120px;
+    max-width: 100%;
+
+}
+
+@media (max-width: 767px) {
+
+    .services .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about .container img {
+        bottom: 60px;
+        margin-left: auto;
+        margin-right: auto;
+
+        margin-top: -60px;
+    }
+}
+
+/* start state */
+
+.state {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: url(https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/stats.png);
+    background-size: cover;
+    position: relative;
+}
+
+.state .container {
+    background-color: var(--transparent-color);
+    display: flex;
+    ;
+    justify-content: center;
+
+}
+
+@media (max-width: 768px) {
+    .state .container {
+
+        flex-wrap: wrap;
+
+
+    }
+
+    .state .container .box {
+        flex-basis: 100%;
+    }
+}
+
+.state .container .box {
+    padding: 50px;
+
+}
+
+.state .container .box i {
+    background-color: black;
+    border-radius: 100%;
+    padding: 10px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.state .container .box div {
+    font-size: 50px;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.state .container .box p {
+    color: white;
+    ;
+}
+
+/* start of our skill */
+.ourskill {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.ourskill .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+
+.ourskill .container .testmo {
+
+
+    margin-top: 30px;
+}
+
+.ourskill .container .testmo .sec .main p {
+    margin-bottom: 20px;
+    max-width: 80%;
+}
+
+
+
+
+
+
+
+
+.ourskill .container .testmo .content {
+    gap: 20px;
+
+
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+}
+
+.content .text-statemo {
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.6;
+    padding: 10px;
+    margin-bottom: 20px;
+
+
+    position: relative;
+    flex-basis: 45%;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.6;
+    padding: 10px;
+    margin-bottom: 20px;
+    /* background-color: #eee; */
+    position: relative;
+    flex-basis: 45%;
+    box-shadow: 0px 0px 20px 1px #00000018;
+    border-bottom: 8px solid #19c8fa
+}
+
+@media (max-width: 1200px) {
+    .content .text-statemo {
+        flex-basis: 75%;
+    }
+
+}
+
+.content .text-statemo .jalal-star {
+    font-size: 50px;
+    padding: 20px 25px;
+
+    border-radius: 100%;
+    background-color: var(--main-color);
+    margin-bottom: 15px;
+    color: #fffffffd
+}
+
+.content .text-statemo .comment {
+
+
+    color: black;
+
+
+
+
+}
+
+.content .text-statemo .name {
+    align-self: flex-end;
+    color: #19c8fa;
+    font-weight: 600;
+}
+
+/* star */
+.star {
+    position: absolute;
+    top: 19%;
+    left: 65%;
+    font-size: 20px;
+    color: gold
+}
+
+.star i.active {
+    color: #eee
+}
+
+.jalal-b {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.jalal-b li {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #777;
+    border-radius: 100%;
+
+
+}
+
+.jalal-b li.active {
+    background-color: #19c8fa;
+}
+
+/* start of pricing */
+
+
+
+.pricing {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+}
+
+.pricing .main p {
+    margin-bottom: 10px;
+}
+
+.pricing .container .grid-pricing {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.pricing .container .grid-pricing .plan .head-p {
+    border-top: 1px solid #19c8fa;
+    border-bottom: 1px solid #19c8fa;
+    padding: 40px 20px;
+    text-align: center;
+
+
+
+}
+
+.grid-pricing .plan .head-p h3 {
+    font-weight: normal;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+
+}
+
+.grid-pricing .plan .head-p span {
+    font-size: 70px;
+    font-weight: 600;
+    position: relative;
+
+}
+
+.grid-pricing .plan .head-p span::before {
+    content: "$";
+    font-size: 30px;
+    position: absolute;
+    left: -50%;
+    font-weight: normal;
+}
+
+.grid-pricing .plan .head-p span::after {
+    content: "/Mo";
+    position: absolute;
+    font-size: 25px;
+    top: 55%;
+    left: 120%;
+}
+
+.grid-pricing .plan ul {
+    border-bottom: 1px solid var(--main-color);
+    margin-bottom: 20px;
+}
+
+.grid-pricing .plan ul li {
+    padding: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.grid-pricing .plan ul li:not(:last-child):after {
+    content: "";
+    width: 140px;
+    height: 1px;
+    background-color: #19c8fa;
+    position: absolute;
+    color: #19c8fa;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%
+}
+
+.grid-pricing .plan .foot-p {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.grid-pricing .plan .foot-p a {
+    text-decoration: none;
+    padding: 20px 20px;
+    border: 1px solid #19c8fa;
+    transition: 0.4s;
+
+}
+
+.grid-pricing .plan .foot-p a:hover {
+    background-color: #19c8fa;
+    color: white;
+}
+
+.pricing .contact-us {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+
+
+
+}
+
+.pricing .contact-us p {
+    margin-bottom: 20px;
+
+}
+
+.pricing .contact-us a {
+    text-decoration: none;
+    padding: 20px 20px;
+    background-color: #19c8fa;
+    transition: 0.4s;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    box-shadow: 0px 0px 20px 1px #00000017;
+
+}
+
+/* start of email */
+
+.email-j {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: url("https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/subscribe.jpg");
+    background-size: cover;
+
+    position: relative;
+
+
+}
+
+.email-j .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+@media (max-width: 1200px) {
+    .email-j .container {
+        flex-direction: column;
+
+    }
+ 
+   
+}
+
+.email-j .container p {
+    color: white;
+    margin-left: 70px;
+    align-self: flex-start;
+}
+
+.email-j .container .input {
+    display: flex;
+    position: relative;
+    border: 2px solid white;
+    margin-bottom: 30px;
+
+
+
+}
+
+.email-j .container .input::before {
+    content: "\f0e0";
+    position: absolute;
+    font-size: 25px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: white;
+    top: 25%;
+    left: 5%;
+
+
+}
+
+.email-j .container .input .em {
+    padding: 20px;
+    width:70%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: white;
+    padding-left: 60px;
+
+
+}
+
+.email-j .container .input .em::placeholder {
+    color: white;
+
+}
+
+.email-j .container .input input[type=submit] {
+    width: 30%;
+    color: white;
+    background-color: #19c8fa;
+
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+
+
+}
+
+/* start of contact */
+.contact {
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+
+.contact .container .form {
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+@media (max-width: 1200px) {
+    .contact .container  {
+        display: flex;
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact .container .form {
+      display: flex;
+
+      flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .contact .container  .inputs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+ 
+    
+.form .inputs input[type=submit] {
+    align-self: center;
+}
+
+.form .inputs input[type=text]  {
+    max-width: 60%; 
+}
+.form .inputs textarea {
+
+    min-width: 424px;
+}
+}
+@media (max-width: 400px) {
+    .form .inputs input[type=text]  {
+        max-width:50%; 
+    }
+    .form .inputs textarea {
+
+        min-width: 50%;
+    }
+}
+
+
+
+.contact .container .form .inputs {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.form .inputs input[type=text] {
+    width: 700px;
+    padding: 20px 20px;
+    margin-bottom: 30px;
+    border: 1px solid #777;
+    outline: none;
+    transition: 0.3s;
+
+
+
+
+}
+
+
+.form .inputs input:focus {
+    border: 1px solid #19c8fa;
+
+}
+
+.form .inputs textarea  {
+    border: 1px solid #777;
+    min-height: 200px;
+    max-width: 700px;
+   
+
+    max-height: 200px;
+    padding: 10px;
+    transition: 0.3s;
+    outline: none;
+}
+
+.form .inputs textarea:focus {
+    border: 1px solid #19c8fa;
+}
+
+.form input[type=submit] {
+    width: 140px;
+    color: white;
+    background-color: #19c8fa;
+
+    border: none;
+    padding: 20px 10px;
+    align-self: flex-end;
+    margin-top: 20px;
+}
+
+.form .info h4 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 20px;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+}
+
+.form .info span {
+    display: block;
+    margin-bottom: 10px;
+    color: #777;
+}
+
+.form .info p {
+    margin-bottom: 20px;
+    color: #777;
+}
+
+/* start of footer */
+.foooter {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-image: url(https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/subscribe.jpg);
+    background-size: cover;
+    position: relative;
+    height:50vh;
+    margin-top: 130px;
+
+
+}
+.foooter .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+
+}
+.foooter .container img {
+    margin-bottom: 60px;
+    z-index: 100;
+   
+}
+.foooter .container h3 {
+    color:white;
+    z-index: 100;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 22px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom:  1px solid white;;
+}
+.foooter .container p {
+    z-index: 100;
+    color: white;
+
+}.foooter .container p span {
+    color:#19c8fa;
+    font-weight: 700;
+}
+.foooter .container .icones {
+    display: flex;
+    gap: 20px;
+    color: white;
+    z-index: 100;
+    margin-bottom: 20px;
+}
+.foooter .container .jalal {
+    z-index: 100; 
+    margin-top: 20px;
+    text-transform: uppercase;
+}
